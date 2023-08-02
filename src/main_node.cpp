@@ -110,6 +110,7 @@ class BMSManlyBatteryNode: public rclcpp::Node
             auto batt_msg = sensor_msgs::msg::BatteryState();
 
             batt_msg.location = "main";
+	    batt_msg.present = true;
             batt_msg.serial_number = batt_serial_number_;
             batt_msg.power_supply_status = sensor_msgs::msg::BatteryState::POWER_SUPPLY_STATUS_DISCHARGING;
             batt_msg.power_supply_health = sensor_msgs::msg::BatteryState::POWER_SUPPLY_HEALTH_GOOD;
